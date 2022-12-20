@@ -36,9 +36,21 @@ doodleButton.addEventListener("click", (e)=>{
     window.location = "https://www.google.com/doodles"
 })
 
+const GurinMalware = (value) => {
+    array = ["Гурин","гурин","Сергей Сергеевич","Gurin","gurin"]
+    for (let index = 0; index < array.length; index++) {
+        if(array[index] == value){
+            return true;
+        }
+    }
+    return false;
+}
+
 function DoGoogleSearch(){
     url = url + input.value;
-    window.location = url;
+    if(GurinMalware(input.value)){
+    alert("Я за я запрещаю вам рофлить")
+    } else {window.location = url;}
 }
 
 document.addEventListener('keydown', function(event) {
