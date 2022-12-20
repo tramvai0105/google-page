@@ -29,7 +29,7 @@ clearButton.onclick = () => {
 }
 
 searchButton.addEventListener("click", (e)=>{
-    DoGoogleSearch()
+    if(input.value.length > 0){DoGoogleSearch()}
 })
 
 doodleButton.addEventListener("click", (e)=>{
